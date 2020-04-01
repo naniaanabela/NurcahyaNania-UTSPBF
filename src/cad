@@ -1,0 +1,245 @@
+import React, { Component } from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import img1 from './img1.jpg';
+import img2 from './img2.jpg';
+import img3 from './img3.jpg';
+import img4 from './img4.jpg';
+import img5 from './img5.jpg';
+import img6 from './img6.jpg';
+import img7 from './img7.jpg';
+import img8 from './img8.jpg';
+import img9 from './img9.jpg';
+// import img10 from './img10.jpg';
+// import img11 from './img11.jpg';
+// import img12 from './img12.jpg';
+
+export class HomePage extends Component {
+    constructor(){
+        super();
+        this.state = {
+            hide1 : true,
+            hide2 : true,
+            hide3 : true
+        }
+
+        this.handleChange1 = this.handleChange1.bind(this);
+        this.handleChange2 = this.handleChange2.bind(this);
+        this.handleChange3 = this.handleChange3.bind(this);
+        this.handleChange4 = this.handleChange4.bind(this);
+    };
+
+    handleChange1(event){
+        if(this.state.hide1){
+            this.setState({hide1: false});
+            this.setState({hide2: true});
+            this.setState({hide3: true});
+            this.setState({hide4: true});
+        }
+        else{
+            this.setState({hide1: true});
+        }
+    }
+    handleChange2(event){
+        if(this.state.hide2){
+            this.setState({hide2: false});
+            this.setState({hide1: true});
+            this.setState({hide3: true});
+            this.setState({hide4: true});
+        }
+        else{
+            this.setState({hide2: true});
+        }
+    }
+
+    handleChange3(event){
+        if(this.state.hide3){
+            this.setState({hide3: false});
+            this.setState({hide2: true});
+            this.setState({hide1: true});
+            this.setState({hide4: true});
+        }
+        else{
+            this.setState({hide3: true});
+        }
+    }
+
+    handleChange4(event){
+        if(this.state.hide4){
+            this.setState({hide4: false});
+            this.setState({hide3: true});
+            this.setState({hide2: true});
+            this.setState({hide1: true});
+        }
+        else{
+            this.setState({hide4: true});
+        }
+    }
+
+    render() {
+        const style1 = this.state.hide1 ? {display: 'none'} : {};
+        const style2 = this.state.hide2 ? {display: 'none'} : {};
+        const style3 = this.state.hide3 ? {display: 'none'} : {};
+        const style4 = this.state.hide4 ? {display: 'none'} : {};
+        return (
+            <div className="row">
+            <div className="col-sm-9">
+            <div className="row">
+                <div className="col-sm-3">
+                    <img src= { img1 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Bungsu - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange1} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                <div className="col-sm-3">
+                    <img src= { img2 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Bungsu - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange1} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <img src={ img3 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Sulung - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange3} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <img src={ img4 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Rehat - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange4} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                    <div className="row">
+                    <div className="col-sm-3">
+                    <img src={ img5 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Bungsu - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange1} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <img src={ img6 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Bungsu - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange2} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <img src={ img7 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Sulung - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange3} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <img src={ img8 } class="img-thumbnail" width="250px" height="300px" />
+                    <div className="container">
+                        <h5><center>Rehat - Kunto Aji</center></h5>
+                    </div>
+                    <div>
+                    <button type="button" onClick={this.handleChange4} class="btn btn-secondary btn-lg btn-block">
+                        Lihat Lirik
+                    </button>
+                    </div>
+                    </div>
+
+                    <div className="row">
+                    </div>
+            </div>
+            </div>
+            </div>
+
+            <div className="col-sm-3">
+                <div className="rows" style={style1}>
+                <h1>Bungsu - Kunto Aji</h1>
+                    <div className="container">
+                        <p>Cukupkanlah</p>
+                        <p>Ikatanmu</p>
+                        <p>Relakanlah yang tak seharusnya untukmu</p>
+                        <p>Cukupkanlah</p>
+                        <p>Ikatanmu</p>
+                        <p>Relakanlah yang tak seharusnya untukmu</p>
+                        <p>Cukupkanlah</p>
+                        <p>Ikatanmu</p>
+                        <p>Relakanlah yang tak seharusnya untukmu</p>
+                        <p>Cukupkanlah</p>
+                        <p>Ikatanmu</p>
+                        <p>Relakanlah yang tak seharusnya untukmu</p>
+                        <p>Sebelum kau menjaga</p>
+                        <p>Merawat melindungi</p>
+                        <p>Segala yang berarti</p>
+                        <p>Yang sebaiknya kau jaga</p>
+                        <p>Adalah dirimu sendiri</p>
+                    </div>
+                </div>
+                <div className="rows" style={style2}>
+                <h1>Pilu Membiru - Kunto Aji</h1>
+                    <div className="container">
+                        <p>Akhirnya aku lihat lagi</p>
+                        <p>Sederhana tanpa banyak cela</p>
+                        <p>Wangimu Berlalu</p>
+
+                        <p>Akhirnya aku lihat lagi</p>
+                        <p>Jemarimu yang bergerak bebas</p>
+                        <p>Seiring Tawamu Hu woo</p>
+
+                        <p>Tak ada yang seindah matamu</p>
+                        <p>Hanya rembulan</p>
+                        <p>Tak ada yang selembut sikapmu</p>
+                        <p>Hanya Lautan</p>
+                        <p>Tak tergantikan</p>
+                        <p>Walau kita taklagi saling menyapa</p>
+                    </div>
+                </div>
+                <div className="rows" style={style3}>
+                    <h1>Lirik Lagu 3</h1>
+                </div>
+                <div className="rows" style={style4}>
+                    <h1>Lirik Lagu 4</h1>
+                </div>
+            </div>
+            </div> 
+        );
+    }
+
+  }
+
